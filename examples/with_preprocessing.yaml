@@ -1,0 +1,145 @@
+workdir: /tmp
+
+with:
+   - /data/project/identification_prediction/projects/gradients_identification_alignment/src/preprocessing/junifer_extensions/juni-farm/juni_farm/datagrabber/hcp_ya_confounds_cat.py
+
+
+datagrabber:
+     kind: MultipleHCP
+     ica_fix: true
+     tasks:
+       - REST1
+       - REST2
+
+preprocess:
+    kind: fMRIPrepConfoundRemover
+    detrend: true
+    standardize: true
+    strategy:
+        wm_csf: full
+        global_signal: full
+    low_pass: 0.08
+    high_pass: 0.01
+    masks:
+      - compute_epi_mask
+      - compute_brain_mask
+      - threshold: 0
+
+storage:
+  kind: HDF5FeatureStorage
+  uri: /data/project/identification_prediction/projects/gradients_identification_alignment/data/hcp_ya_ica_fix/hcp_ya_ica_fix.hdf5
+
+
+markers:
+  
+  - name: parccortical-Schaefer100x17FSLMNI_marker-timeseries
+    kind: ParcelAggregation
+    parcellation: Schaefer100x17
+    method: mean
+    on: BOLD
+    masks:
+      - inherit
+   
+  - name: parccortical-Schaefer100x17FSLMNI_marker-empiricalFC
+    kind: FunctionalConnectivityParcels
+    parcellation: Schaefer100x17
+    cor_method: correlation
+    cor_method_params:
+      empirical: true
+    masks:
+      - inherit  
+          
+  - name: parccortical-Schaefer200x17FSLMNI_marker-empiricalFC
+    kind: FunctionalConnectivityParcels
+    parcellation: Schaefer200x17
+    cor_method: correlation
+    cor_method_params:
+      empirical: true
+    masks:
+      - inherit
+  
+  - name: parccortical-Schaefer200x17FSLMNI_marker-timeseries
+    kind: ParcelAggregation
+    method: mean
+    parcellation: Schaefer200x17
+    on: BOLD
+    masks:
+      - inherit
+     
+  - name: parccortical-Schaefer400x17FSLMNI_marker-empiricalFC
+    kind: FunctionalConnectivityParcels
+    parcellation: Schaefer400x17
+    cor_method: correlation
+    cor_method_params:
+      empirical: true
+    masks:
+      - inherit
+
+  - name: parccortical-Schaefer400x17FSLMNI_marker-timeseries
+    kind: ParcelAggregation
+    method: mean
+    parcellation: Schaefer400x17
+    on: BOLD
+    masks:
+      - inherit
+   
+  - name: parccortical-Schaefer100x7FSLMNI_marker-empiricalFC
+    kind: FunctionalConnectivityParcels
+    parcellation: Schaefer100x7
+    cor_method: correlation
+    cor_method_params:
+      empirical: true
+    masks:
+      - inherit
+  
+  - name: parccortical-Schaefer100x7FSLMNI_marker-timeseries
+    kind: ParcelAggregation
+    method: mean
+    parcellation: Schaefer100x7
+    on: BOLD
+    masks:
+      - inherit
+         
+  - name: parccortical-Schaefer200x7FSLMNI_marker-empiricalFC
+    kind: FunctionalConnectivityParcels
+    parcellation: Schaefer200x7
+    cor_method: correlation
+    cor_method_params:
+      empirical: true
+    masks:
+      - inherit
+  
+  - name: parccortical-Schaefer200x7FSLMNI_marker-timeseries
+    kind: ParcelAggregation
+    method: mean
+    parcellation: Schaefer200x7
+    on: BOLD
+    masks:
+      - inherit
+    
+  - name: parccortical-Schaefer400x7FSLMNI_marker-empiricalFC
+    kind: FunctionalConnectivityParcels
+    parcellation: Schaefer400x7
+    cor_method: correlation
+    cor_method_params:
+      empirical: true
+    masks:
+      - inherit
+  
+  - name: parccortical-Schaefer400x7FSLMNI_marker-timeseries
+    kind: ParcelAggregation
+    method: mean
+    parcellation: Schaefer400x7
+    on: BOLD
+    masks:
+      - inherit
+
+queue:
+  jobname: PREPROCESS_HCP1200
+  kind: HTCondor
+  collect: on_success_only
+  env:
+    kind: conda
+    name: gradient_identification
+  mem: 20G
+  verbose: 8
