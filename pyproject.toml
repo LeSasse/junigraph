@@ -40,7 +40,7 @@ dynamic = ["version"]
 repository = "https://github.com/LeSasse/junigraph"
 
 [project.scripts]
-junilog = "junigraph.junigraph:main"
+junigraph = "junigraph.main:main"
 
 #[project.optional-dependencies]
 #dev = ["tox"]

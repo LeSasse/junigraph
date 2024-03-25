@@ -56,12 +56,16 @@ class TextBox:
         drawing,
         text,
         position,
+        color="mistyrose",
         font_size=9,
         font_size_to_width_ratio=0.65,
+        opacity=0.3,
     ):
+        self.color = color
         self.position = position
         self.text = text
         self.font_size = font_size
+        self.opacity = opacity
 
         self.padding_x, self.padding_y = 10, 20
         text_x, text_y = self.position
@@ -80,7 +84,7 @@ class TextBox:
             if n_longest_line < len_line:
                 n_longest_line = len_line
 
-        n_lines = on_line + 1
+        n_lines = on_line + 2
 
         # fit a rectangle around the text
         self.rect_len_x, self.rect_len_y = (
@@ -94,9 +98,9 @@ class TextBox:
         self.drawn = drawing.rect(
             insert=(self.rect_pos_x, self.rect_pos_y),
             size=(self.rect_len_x, self.rect_len_y),
-            fill="mistyrose",
+            fill=self.color,
             stroke="black",
-            fill_opacity=0.3,
+            fill_opacity=self.opacity,
             rx=10,
             ry=10,
         )

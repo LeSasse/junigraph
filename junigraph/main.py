@@ -3,7 +3,7 @@ from argparse import ArgumentParser
 from pathlib import Path
 from pprint import pformat
 import svgwrite
-from .presets import TextBox, Arrow, Connector
+from .presets import TextBox, Connector
 from .io import load_yaml_file
 
 
@@ -26,6 +26,21 @@ def parse_args():
         help="Format to stringify the yaml objects.",
         choices=["yaml", "json"],
         default="yaml",
+    )
+    parser.add_argument(
+        "-fs", "--fontsize", help="Fontsize for text.", type=int, default=10
+    )
+    parser.add_argument(
+        "-c",
+        "--color",
+        help="Background color of the text boxes.",
+        default="mistyrose",
+    )
+    parser.add_argument(
+        "-o",
+        "--opacity",
+        help="Opacity of the text boxes. Should be between 0 and 1.",
+        default=0.3,
     )
     return parser.parse_args()
 
@@ -76,21 +91,12 @@ def main():
             initial_x,
             initial_y,
         ),
+        font_size=args.fontsize,
+        color=args.color,
+        opacity=args.opacity,
     )
 
-    if preprocessing_text != "no_preprocess":
-        # point an arrow at the preprocessing
-        Arrow(
-            dwg,
-            position=(
-                text_box_datagrabber.rect_pos_x
-                + text_box_datagrabber.rect_len_x
-                + padding_arrow,
-                text_box_datagrabber.rect_pos_y
-                + (text_box_datagrabber.rect_len_y / 2),
-            ),
-            length=arrow_length,
-        )
+    if "no_preprocess" not in preprocessing_text:
         # create a preprocessing textbox
         text_x_preproc = (
             initial_x
@@ -99,8 +105,18 @@ def main():
             + arrow_length
         )
         text_box_preprocessing = TextBox(
-            dwg, preprocessing_text, position=(text_x_preproc, initial_y)
+            dwg,
+            preprocessing_text,
+            position=(
+                text_x_preproc,
+                initial_y - text_box_datagrabber.rect_len_y / 2,
+            ),
+            font_size=args.fontsize,
+            color=args.color,
+            opacity=args.opacity,
         )
+        _ = Connector(dwg, text_box_datagrabber, text_box_preprocessing)
+
         current_marker_x = (
             text_box_preprocessing.rect_pos_x
             + text_box_preprocessing.rect_len_x
@@ -132,7 +148,12 @@ def main():
 
         # create a marker text box
         text_box_marker = TextBox(
-            dwg, marker_text, position=(current_marker_x, current_marker_y)
+            dwg,
+            marker_text,
+            position=(current_marker_x, current_marker_y),
+            font_size=args.fontsize,
+            color=args.color,
+            opacity=args.opacity,
         )
         # connect either datagrabber or preprocessing box to current marker
         _ = Connector(dwg, reference_text_box_for_markers, text_box_marker)
@@ -160,6 +181,10 @@ def main():
             + 3 * padding_arrow,
             initial_y,
         ),
+        font_size=args.fontsize,
+        font_size_to_width_ratio=0.5,  # tends to be smaller due to slashes
+        color=args.color,
+        opacity=args.opacity,
     )
 
     for marker_box in marker_boxes:
@@ -167,20 +192,26 @@ def main():
 
         _ = Connector(dwg, marker_box, text_box_storage)
 
-    full_document_size_x = (
-        initial_x * 2
-        + text_box_datagrabber.rect_len_x
-        + text_box_preprocessing.rect_len_x
-        + length_longest_marker_box
-        + (6 * arrow_length)
-        + (10 * padding_arrow)
-        + text_box_storage.rect_len_x
-    )
+    if "no_preprocess" not in preprocessing_text:
+        full_document_size_x = (
+            initial_x * 2
+            + text_box_datagrabber.rect_len_x
+            + text_box_preprocessing.rect_len_x
+            + length_longest_marker_box
+            + (6 * arrow_length)
+            + (10 * padding_arrow)
+            + text_box_storage.rect_len_x
+        )
+    else:
+        full_document_size_x = (
+            initial_x * 2
+            + text_box_datagrabber.rect_len_x
+            + length_longest_marker_box
+            + (6 * arrow_length)
+            + (10 * padding_arrow)
+            + text_box_storage.rect_len_x
+        )
 
     dwg.attribs["width"] = full_document_size_x
     dwg.attribs["height"] = full_document_size_y
     dwg.save()
-
-
-if __name__ == "__main__":
-    main()
