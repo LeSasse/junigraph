@@ -33,6 +33,7 @@ classifiers = [
 dependencies = [
     "PyYAML",
     "svgwrite",
+    "pygments"
 ]
 dynamic = ["version"]
 
