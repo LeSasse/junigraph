@@ -223,11 +223,15 @@ def main():
     datagrabber_text = yaml.safe_dump(
         pipeline_spec["datagrabber"], width=1, sort_keys=False
     )
+    queue_text = yaml.safe_dump(
+        pipeline_spec["queue"], width=1, sort_keys=False
+    )
     preprocessing_text = yaml.safe_dump(
         pipeline_spec.get("preprocess", "no_preprocess"),
         width=1,
         sort_keys=False,
     )
+
     storage_text = yaml.safe_dump(
         pipeline_spec["storage"], width=1, sort_keys=False
     )
@@ -279,6 +283,21 @@ def main():
         value_color=args.value_color,
     )
 
+    # create a queue text box
+    _ = TextBox(
+        dwg,
+        queue_text,
+        origin="top_left",
+        position=(
+            5,  # initial_x + text_box_datagrabber.rect_len_x / 2,
+            5,  # initial_y + text_box_datagrabber.rect_len_y / 2 + queue_padding,
+        ),
+        font_size=args.fontsize,
+        color=args.color,
+        opacity=args.opacity,
+        key_color=args.key_color,
+        value_color=args.value_color,
+    )
     if "no_preprocess" not in preprocessing_text:
         # create a preprocessing textbox
         text_x_preproc = (

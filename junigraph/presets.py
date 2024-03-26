@@ -151,6 +151,11 @@ class TextBox:
         elif origin == "bottom_left":
             rect_x, rect_y = self.position
             rect_y -= self.rect_len_y
+        elif origin == "center_center":
+            rect_x, rect_y = self.position
+            rect_x -= self.rect_len_x / 2
+        else:
+            NotImplementedError("Other origins are not yet implemented.")
 
         for on_line, line in enumerate(text_list):
             lexed = lex(line, YamlLexer())  # , SvgFormatter(outencoding=""))

@@ -5,7 +5,16 @@
 </tspan></text><text font-size="7px" x="17" y="184.0"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">REST1</tspan><tspan>
 </tspan></text><text font-size="7px" x="17" y="191.0"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">REST2</tspan><tspan>
 </tspan></text><text font-size="7px" x="17" y="198.0"><tspan>
-</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="56" rx="10" ry="10" stroke="black" width="77.35" x="10" y="149.0" /><text font-size="7px" x="109.05" y="138.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">fMRIPrepConfoundRemover</tspan><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="56" rx="10" ry="10" stroke="black" width="77.35" x="10" y="149.0" /><text font-size="7px" x="12" y="19"><tspan fill="darkgreen">jobname</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">PREPROCESS_HCP1200</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="26"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">HTCondor</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="33"><tspan fill="darkgreen">collect</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">on_success_only</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="40"><tspan fill="darkgreen">env</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="47"><tspan>  </tspan><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">conda</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="54"><tspan>  </tspan><tspan fill="darkgreen">name</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">gradient_identification</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="61"><tspan fill="darkgreen">mem</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">20G</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="68"><tspan fill="darkgreen">verbose</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">8</tspan><tspan>
+</tspan></text><text font-size="7px" x="12" y="75"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="77" rx="10" ry="10" stroke="black" width="141.05" x="5" y="5" /><text font-size="7px" x="109.05" y="138.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">fMRIPrepConfoundRemover</tspan><tspan>
 </tspan></text><text font-size="7px" x="109.05" y="145.5"><tspan fill="darkgreen">detrend</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">true</tspan><tspan>
 </tspan></text><text font-size="7px" x="109.05" y="152.5"><tspan fill="darkgreen">standardize</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">true</tspan><tspan>
 </tspan></text><text font-size="7px" x="109.05" y="159.5"><tspan fill="darkgreen">strategy</tspan><tspan>:</tspan><tspan>
