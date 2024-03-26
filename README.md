@@ -43,5 +43,7 @@ junigraph examples/less_markers.yaml examples/less_markers_custom.svg \
     -hs 0.07 \
     -spml 20
 ```
+
 This results in:
+
 ![alt](examples/less_markers_custom.svg)
