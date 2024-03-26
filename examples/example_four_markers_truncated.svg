@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="tiny" height="354px" version="1.2" width="700px" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink"><defs /><text font-size="7px" x="17" y="163.0"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">MultipleHCP</tspan><tspan>
+</tspan></text><text font-size="7px" x="17" y="170.0"><tspan fill="darkgreen">ica_fix</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">true</tspan><tspan>
+</tspan></text><text font-size="7px" x="17" y="177.0"><tspan fill="darkgreen">tasks</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="17" y="184.0"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">REST1</tspan><tspan>
+</tspan></text><text font-size="7px" x="17" y="191.0"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">REST2</tspan><tspan>
+</tspan></text><text font-size="7px" x="17" y="198.0"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="56" rx="10" ry="10" stroke="black" width="77.35" x="10" y="149.0" /><text font-size="7px" x="109.05" y="138.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">fMRIPrepConfoundRemover</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="145.5"><tspan fill="darkgreen">detrend</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">true</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="152.5"><tspan fill="darkgreen">standardize</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">true</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="159.5"><tspan fill="darkgreen">strategy</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="166.5"><tspan>  </tspan><tspan fill="darkgreen">wm_csf</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">full</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="173.5"><tspan>  </tspan><tspan fill="darkgreen">global_signal</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">full</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="180.5"><tspan fill="darkgreen">low_pass</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">0.08</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="187.5"><tspan fill="darkgreen">high_pass</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">0.01</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="194.5"><tspan fill="darkgreen">masks</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="201.5"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">compute_epi_mask</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="208.5"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">compute_brain_mask</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="215.5"><tspan>-</tspan><tspan> </tspan><tspan fill="darkgreen">threshold</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">0</tspan><tspan>
+</tspan></text><text font-size="7px" x="109.05" y="222.5"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="105" rx="10" ry="10" stroke="black" width="131.95" x="102.05" y="124.5" /><line stroke="black" x1="87.35" x2="102.05" y1="177.0" y2="177.0" /><text font-size="7px" x="275.3" y="118.5"><tspan fill="darkgreen">name</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">parccortical-Schaefer100x17FSLMNI_marker-timeseries</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="125.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">ParcelAggregation</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="132.5"><tspan fill="darkgreen">parcellation</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">Schaefer100x17</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="139.5"><tspan fill="darkgreen">method</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">mean</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="146.5"><tspan fill="darkgreen">true</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">BOLD</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="153.5"><tspan fill="darkgreen">masks</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="160.5"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">inherit</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="167.5"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="70" rx="10" ry="10" stroke="black" width="263.9" x="268.3" y="104.5" /><line stroke="black" x1="234.0" x2="268.3" y1="177.0" y2="139.5" /><text font-size="7px" x="275.3" y="193.5"><tspan fill="darkgreen">name</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">parccortical-Schaefer100x17FSLMNI_marker-empiricalFC</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="200.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">FunctionalConnectivityParcels</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="207.5"><tspan fill="darkgreen">parcellation</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">Schaefer100x17</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="214.5"><tspan fill="darkgreen">cor_method</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">correlation</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="221.5"><tspan fill="darkgreen">cor_method_params</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="228.5"><tspan>  </tspan><tspan fill="darkgreen">empirical</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">true</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="235.5"><tspan fill="darkgreen">masks</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="242.5"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">inherit</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="249.5"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="77" rx="10" ry="10" stroke="black" width="263.9" x="268.3" y="179.5" /><line stroke="black" x1="234.0" x2="268.3" y1="177.0" y2="218.0" /><text font-size="7px" x="275.3" y="36.5"><tspan fill="darkgreen">name</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">parccortical-Schaefer200x17FSLMNI_marker-empiricalFC</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="43.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">FunctionalConnectivityParcels</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="50.5"><tspan fill="darkgreen">parcellation</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">Schaefer200x17</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="57.5"><tspan fill="darkgreen">cor_method</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">correlation</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="64.5"><tspan fill="darkgreen">cor_method_params</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="71.5"><tspan>  </tspan><tspan fill="darkgreen">empirical</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">true</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="78.5"><tspan fill="darkgreen">masks</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="85.5"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">inherit</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="92.5"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="77" rx="10" ry="10" stroke="black" width="263.9" x="268.3" y="22.5" /><line stroke="black" x1="234.0" x2="268.3" y1="177.0" y2="61.0" /><text font-size="7px" x="275.3" y="275.5"><tspan fill="darkgreen">name</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">parccortical-Schaefer200x17FSLMNI_marker-timeseries</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="282.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">ParcelAggregation</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="289.5"><tspan fill="darkgreen">method</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">mean</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="296.5"><tspan fill="darkgreen">parcellation</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">Schaefer200x17</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="303.5"><tspan fill="darkgreen">true</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">BOLD</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="310.5"><tspan fill="darkgreen">masks</tspan><tspan>:</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="317.5"><tspan>-</tspan><tspan> </tspan><tspan fill="navy">inherit</tspan><tspan>
+</tspan></text><text font-size="7px" x="275.3" y="324.5"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="70" rx="10" ry="10" stroke="black" width="263.9" x="268.3" y="261.5" /><line stroke="black" x1="234.0" x2="268.3" y1="177.0" y2="296.5" /><text font-size="7px" x="573.5" y="173.5"><tspan fill="darkgreen">kind</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">HDF5FeatureStorage</tspan><tspan>
+</tspan></text><text font-size="7px" x="573.5" y="180.5"><tspan fill="darkgreen">uri</tspan><tspan>:</tspan><tspan> </tspan><tspan fill="navy">/data/pr...ica_fix.hdf5</tspan><tspan>
+</tspan></text><text font-size="7px" x="573.5" y="187.5"><tspan>
+</tspan></text><rect fill="mistyrose" fill-opacity="0.3" height="35" rx="10" ry="10" stroke="black" width="98.0" x="566.5" y="159.5" /><line stroke="black" x1="532.2" x2="566.5" y1="139.5" y2="177.0" /><line stroke="black" x1="532.2" x2="566.5" y1="218.0" y2="177.0" /><line stroke="black" x1="532.2" x2="566.5" y1="61.0" y2="177.0" /><line stroke="black" x1="532.2" x2="566.5" y1="296.5" y2="177.0" /></svg>
